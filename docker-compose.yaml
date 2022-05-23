@@ -1,0 +1,14 @@
+version: '2'
+services:
+  jupyterhub:
+    image: jupyterhub_a
+    restart: always
+    volumes:
+      - jupyterhub-user:/home
+      - jupyterhub-admin:/srv/jupyterhub
+    ports:
+      - "8000:8000"
+    tty: true
+volumes:
+  jupyterhub-user:
+  jupyterhub-admin:
